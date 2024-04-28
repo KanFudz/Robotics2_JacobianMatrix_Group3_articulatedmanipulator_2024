@@ -431,25 +431,6 @@ def calculate_forward():
         ωz_entry.grid(row=8,column=1, padx=5, pady=5)
         ωz_unit.grid(row=8,column=2, padx=5, pady=5)
 
-        ## Singularity
-        D_J = np.linalg.inv(JM1)  # Calculate Singularity
-        D_J_text = "Singularity = " + str(np.around(D_J, 3))  # Convert result to string
-        D_J = Label(J_sw, text=D_J_text, font=(5), bg='#FF1FA9', fg='white')
-        D_J.grid(row=0, column=4, padx=5, pady=5)
-
-        ## Inverse Velocity
-        I_V = np.linalg.inv(JM1)  # Calculate inverse velocity
-        I_V_text = "Inverse Velocity = " + str(np.around(I_V, 3))  # Convert result to string
-        I_V = Label(J_sw, text=I_V_text, font=(5), bg='#F50097', fg='white')
-        I_V.grid(row=1, column=4, padx=5, pady=5)
-
-
-        # Force-Torque Analysis
-        F_T = np.linalg.inv(JM1)  # Calculate Singularity
-        F_T_text = "Force-Torque Analysis = " + str(np.around(F_T, 3))  # Convert result to string
-        F_T = Label(J_sw, text=F_T_text, font=(5), bg='#FF33B1', fg='white')
-        F_T.grid(row=2, column=4, padx=5, pady=5)
-
         # Update Button
         update_but = Button(J_sw,text="Update",bg="green",fg="white",command=update_velo)
         update_but.grid(row=16,column=0, padx=5, pady=5)
