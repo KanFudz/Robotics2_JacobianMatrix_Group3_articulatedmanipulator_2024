@@ -133,7 +133,7 @@ JM2 = np.concatenate((J4,J5,J6),1)
 
 J = np.concatenate((JM1,JM2),0)
 print("J = ")
-print(J)
+print(np.around(J,3))
 
 
 #4. Differential Equations
