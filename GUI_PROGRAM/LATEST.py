@@ -258,10 +258,25 @@ def calculate_forward():
         Z_1 = [[0],[0],[1]] #The [0,0,1] vector
 
         #Row 1 to 3, Column 1
-        J1 = [[1,0,0],[0,1,0],[0,0,1]]
-        J1 = np.dot(J1,Z_1)
-        J1 = np.array(J1)
+        J1a = [[1,0,0],
+               [0,1,0],
+               [0,0,1]] #R0_0
+        J1a = np.dot(J1a,Z_1)
 
+        J1b_1 = H0_3[0:3,3]
+        J1b_1 = np.array (J1b_1)
+
+        J1b_2 = [[0],[0],[0]]
+        J1b_2 = np.array (J1b_2)
+
+        J1b = J1b_1 - J1b_2
+
+        J1 = [[(J1a[1,0]*J1b[2,0])-(J1a[2,0]*J1b[1,0])],
+              [(J1a[2,0]*J1b[0,0])-(J1a[0,0]*J1b[2,0])],
+              [(J1a[0,0]*J1b[1,0])-(J1a[1,0]*J1b[0,0])]]
+        
+        J1 = np.array(J1)
+       
         #Row 1 to 3, column 2
         J2a = H0_1[0:3,0:3] 
         J2a = np.dot(J2a,Z_1)
