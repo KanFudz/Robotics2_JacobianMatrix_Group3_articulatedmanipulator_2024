@@ -88,7 +88,8 @@ J1 = [[J1a[1,0]*J1b[2,0] - J1a[2,0]*J1b[1,0]],
       [J1a[0,0]*J1b[1,0] - J1a[1,0]*J1b[0,0]]]
 
 J1 = np.matrix(J1)
-
+print("J1 = ")
+print(J1)
 
 #Row 1 to 3, Column 2
 J2a = H0_1[0:3,0:3] #R0_1
@@ -107,7 +108,8 @@ J2 = [[J2a[1,0]*J2b[2,0] - J2a[2,0]*J2b[1,0]],
       [J2a[0,0]*J2b[1,0] - J2a[1,0]*J2b[0,0]]]
 
 J2 = np.matrix(J2)
-
+print("J2 = ")
+print(J2)
 
 #Row 1 to 3, Column 3
 J3a = H0_2[0:3,0:3] #R0_2
@@ -126,19 +128,27 @@ J3 = [[J3a[1,0]*J3b[2,0] - J3a[2,0]*J3b[1,0]],
       [J3a[0,0]*J3b[1,0] - J3a[1,0]*J3b[0,0]]]
 
 J3 = np.matrix(J3)
+print("J3 = ")
+print(J3)
 
 #2. Rotation / Orientation Vectors
 #Row 4 to 6, Column 1
 J4 = [[0],[0],[1]]
 J4 = np.matrix(J4)
+print("J4 = ")
+print(J4)
 
 #Row 4 to 6, Column 2
 J5 = J2a
 J5 = np.matrix(J5)
+print("J5 = ")
+print(J5)
 
 #Row 4 to 6, Column 3
 J6 = J3a
 J6 = np.matrix(J6)
+print("J6 = ")
+print(J6)
 
 #3. Concatenated Jacobian Matrix
 JM1 = np.concatenate((J1,J2,J3),1)
