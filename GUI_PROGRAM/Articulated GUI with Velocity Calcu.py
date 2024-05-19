@@ -15,7 +15,7 @@ root.title('Articulated Calculator')
 root.resizable(False, False)
 root.geometry("600x400")
 pc = PhotoImage(file="/home/john/Rob2_3202/bgrobo.png") #Make sure to change the file address to where the bgrobo is located in your files after downloading the photo.
-#Also check the filename if it's correct.
+#Also check the filename if it's correct. Make sure that it is in png image type.
 blabel=Label(root,image=pc)
 blabel.place(x=0,y=0, relwidth=1, relheight=1)
 
